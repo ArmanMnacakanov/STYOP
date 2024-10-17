@@ -1,0 +1,1620 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.233);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: .4s;
+    transition-delay: .100s;
+    z-index: 99999999;
+    position: fixed;
+}
+
+#menu_btn {
+    width: 30px;
+    aspect-ratio: 1;
+    display: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 10px;
+    background-color: transparent;
+    font-size: 20px;
+
+    &>span {
+        height: 2px;
+        width: 80%;
+        background-color: #eb5424;
+        transition: .4s ease;
+        border-radius: 5px;
+    }
+}
+
+.open {
+    background-color: red;
+
+    &>span:first-child {
+        transform: rotate(40deg) translateY(4px);
+    }
+
+    &>span:nth-child(2) {
+        display: none;
+    }
+
+    &>span:last-child {
+        transform: rotate(-40deg) translateY(-4px);
+    }
+}
+
+.Logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.Logo a {
+    color: #212227;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 45px;
+    transition: 0.4s;
+}
+
+.Logo a:hover {
+    color: #777;
+}
+
+.Menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Menu li {
+    font-size: 13px;
+    list-style: none;
+    margin: 20px;
+    font-weight: 600;
+}
+
+.Menu a {
+    color: black;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.Menu a:hover {
+    color: #eb5424;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./Header_IMG/1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &>div {
+        width: 720px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-direction: column;
+
+        div:nth-child(2),
+        div:nth-child(3) {
+            padding-bottom: 30px;
+        }
+
+        p {
+            text-align: center;
+            line-height: 30px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #eb5424;
+            color: #fff;
+            padding: 15px 50px;
+            font-size: 18px;
+            transition: 0.5s;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fff;
+                color: #eb5424;
+            }
+        }
+
+    }
+}
+
+.banner div h1 {
+    text-align: center;
+    padding-top: 20%;
+    font-size: 52px;
+    color: #777;
+}
+
+.banner div h3 {
+    text-align: center;
+    font-size: 30px;
+    color: #eb5424;
+}
+
+.banner div p {
+    color: #777;
+}
+
+.WorkContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.WorkTitleBOX h1 {
+    text-align: left;
+    padding: 0px 70px;
+    margin-top: 100px;
+    font-weight: 100;
+    font-size: 58px;
+}
+
+.WorkTitleBOX span {
+    font-weight: 700;
+}
+
+.WorkBox {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.WorkData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Work h2 {
+    color: #eb5424;
+    width: 100%;
+    padding-bottom: 30px;
+    border-radius: 2px;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.Work h2::before {
+    width: 40%;
+    height: 1px;
+    content: '';
+    position: absolute;
+    left: 30%;
+    top: 90%;
+    background-color: #7a7979;
+}
+
+.Work p {
+    color: #777;
+    line-height: 26px;
+    text-align: center;
+}
+
+.Work {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #666;
+    border-radius: 2px;
+    gap: 55px;
+    padding: 80px 40px 80px 40px;
+    transition: 0.6s;
+    margin: 5px;
+}
+
+.Work:hover {
+    border: 1px solid #eb5424;
+}
+
+.Work i {
+    color: #777;
+    font-size: 50px;
+}
+
+.PortfolioContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    gap: 45px;
+}
+
+.PortfolioContainer h2 {
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.PortfolioContainer span {
+    font-weight: 700;
+}
+
+.PortfolioTitleBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Links {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    gap: 20px;
+
+    li {
+        width: auto;
+        height: 60px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            color: #666;
+            font-size: 20px;
+            transition: 0.4s;
+            padding: 10px 15px;
+            display: block;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+
+
+            &:hover {
+                background-color: #eb5424;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+.Portfolio_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Portfolio {
+    width: 315px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    animation: show .5s ease-in-out forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.Portfolio_Info {
+    width: 100%;
+    height: 100%;
+    background-color: #eb5224c4;
+    color: #ffffffe0;
+    opacity: 0;
+    transition: 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.Portfolio:hover {
+    .Portfolio_Info {
+        opacity: 1;
+    }
+}
+
+.ProfileSkills_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 60px;
+    gap: 15px;
+}
+
+.profile_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.Profile {
+    width: 700px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.ProfileName {
+    font-size: 60px;
+    font-weight: 100;
+    color: #303030;
+}
+
+.ProfileName span {
+    font-weight: 700;
+}
+
+.ProfileList {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    color: #606060;
+}
+
+.ProfileList li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    font-size: 17px;
+}
+
+.ProfileList span {
+    font-weight: 700;
+    width: 80px;
+}
+
+.ProfileList h3 {
+    font-weight: 100;
+}
+
+.ProfileList a {
+    color: #eb5424;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.ProfileList a:hover {
+    color: #337ab7;
+}
+
+.Skill_Box {
+    width: 700px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Skill_Name {
+    padding: 0px 200px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #303030;
+    text-wrap: nowrap;
+}
+
+.Skill_Name span {
+    font-weight: 100;
+}
+
+.Skill_Box p {
+    font-size: 17px;
+    color: #606060;
+    line-height: 28px;
+}
+
+.Progress_Box {
+    width: 78%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    /* padding: 20px; */
+    gap: 10px;
+}
+
+.Progress_Box label {
+    width: 400px;
+    color: #606060;
+    font-weight: 500;
+}
+
+progress {
+    width: 100%;
+    appearance: none;
+    height: 5px;
+    position: relative;
+}
+
+progress::-webkit-progress-value {
+    background-color: #eb5424;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(158, 157, 157, 0.185);
+    border-radius: 30px;
+}
+
+.Progress_Box div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Progress_Box span {
+    color: #606060;
+    font-weight: 200;
+    font-size: 11px;
+}
+
+.Resume {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(./Resume_IMG/1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 28px;
+    padding: 0px 65px;
+}
+
+.Resume_Box {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.Resume_Box h4 {
+    font-size: 32px;
+    font-weight: 100;
+    color: #606060;
+}
+
+.Resume_Box h4 span {
+    color: #212227;
+    font-weight: 700;
+}
+
+.Resume_Box h2 {
+    font-size: 36px;
+    color: #eb5424;
+    font-weight: 100;
+}
+
+.Resume_Box h2 span {
+    font-weight: 700;
+}
+
+.Resume_Box p {
+    font-size: 18px;
+    color: #606060;
+}
+
+.Resume_Box p a {
+    color: #337ab7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.Resume_Box p a:hover {
+    color: #606060;
+}
+
+.Social_Link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Social_Info {
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 70px 45px;
+    color: #ffffff;
+    overflow: hidden;
+    gap: 20px;
+    background-color: #000000;
+    transition: 0.5s;
+}
+
+
+.Social_Info:first-child {
+    background: rgb(59, 89, 152);
+    background: linear-gradient(164deg, rgba(59, 89, 152, 1) 45%, rgba(59, 89, 152, 1) 51%, rgba(175, 183, 205, 1) 80%, rgba(59, 89, 152, 1) 100%);
+}
+
+.Social_Info:nth-child(2) {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(193deg, rgba(131, 58, 180, 1) 0%, rgba(182, 46, 161, 1) 20%, rgba(238, 10, 10, 1) 50%, rgba(255, 81, 0, 1) 76%, rgba(252, 247, 69, 1) 93%);
+}
+
+.Social_Info:last-child {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(167deg, rgba(34, 193, 195, 1) 10%, rgba(207, 0, 252, 1) 52%, rgba(255, 231, 0, 1) 100%);
+}
+
+.Social_Info:hover {
+    background: rgb(0, 0, 0);
+}
+
+.Social_Info div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Social_Info i {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #777;
+}
+
+.Social_Info h3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 17px;
+    gap: 20px;
+
+}
+
+.Social_Info span {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.Drop_Line {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 50px 0;
+}
+
+.Drop_Title h1 {
+    font-size: 60px;
+    font-weight: 100;
+    position: relative;
+}
+
+.Drop_Title h1::before {
+    width: 22%;
+    height: 1px;
+    content: '';
+    position: absolute;
+    left: 38%;
+    top: 175%;
+    background-color: #afadad;
+}
+
+.Drop_Title span {
+    font-weight: 700;
+}
+
+.Input_Box {
+    width: 100%;
+    height: auto;
+    padding: 90px 12px 0px 12px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Input_Box input::placeholder {
+    padding: 0px 10px;
+    font-size: 14px;
+}
+
+.Input_Box div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Input_Box div:first-child input {
+    width: 35%;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #666;
+    margin: 0px 1%;
+    background: transparent;
+    outline: none;
+    transition: 0.6s ease-in;
+    color: #fff;
+}
+
+.Input_Box div:first-child input:hover {
+    background: #000000;
+}
+
+.Input_Box div:first-child input:focus {
+    border-color: #44a8ff;
+}
+
+.Subject {
+    width: 72%;
+    height: 38px;
+    border: 1px solid #666;
+    background: transparent;
+    outline: none;
+    transition: 0.6s ease-in;
+    color: #fff;
+}
+
+.Subject::placeholder {
+    font-size: 14px;
+}
+
+.Subject:hover {
+    background: #000000;
+}
+
+.Subject:focus {
+    border-color: #44a8ff;
+}
+
+.Input_Box textarea {
+    width: 72%;
+    height: auto;
+    border: 1px solid #666;
+    background: transparent;
+    outline: none;
+    transition: 0.6s ease-in;
+    color: #fff;
+}
+
+.Input_Box textarea:hover {
+    background: #000000;
+}
+
+.Input_Box textarea::placeholder {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.Input_Box textarea:focus {
+    border-color: #44a8ff;
+}
+
+.Input_Box button {
+    width: 40%;
+    height: 34px;
+    background: transparent;
+    border: 1px solid #666;
+    outline: none;
+    transition: 0.6s ease-in;
+    color: #777;
+    font-size: 14px;
+}
+
+.Input_Box button:hover {
+    background: #000000;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    padding: 30px 0px 30px 0px;
+}
+
+
+footer a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+@media(min-width:1024px) and (max-width:1200px) {
+
+    header {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.233);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        transition: .4s;
+        transition-delay: .100s;
+        position: fixed;
+        z-index: 99999999;
+    }
+
+    #menu_btn {
+        display: none;
+    }
+
+    .Logo {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 10%;
+    }
+
+    .Logo a {
+        color: #212227;
+        text-decoration: none;
+        font-size: 20px;
+        margin-left: -60px;
+        transition: 0.4s;
+    }
+
+    .Logo a:hover {
+        color: #777;
+    }
+
+    .Menu {
+        width: auto;
+        overflow: hidden;
+        height: auto;
+        /*0*/
+        display: flex;
+        background: white;
+        justify-content: center;
+        flex-direction: column;
+        /* top: 100%; */
+        /* position: absolute; */
+    }
+
+    .Menu ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .Menu li {
+        list-style: none;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .Menu a {
+        color: black;
+        text-decoration: none;
+        transition: 0.4s;
+    }
+
+    .Menu a:hover {
+        color: #eb5424;
+    }
+
+    .PortfolioContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #f8f8f8;
+        gap: 20px;
+    }
+
+    .Portfolio_Box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .Portfolio {
+        width: 337px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        animation: show .5s ease-in-out forwards;
+    }
+
+    .PortfolioTitleBox {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5%;
+    }
+
+    .Social_Info {
+        width: 400px;
+        height: 200px;
+    }
+
+    .ProfileSkills_container {
+        padding: 100px 10px;
+    }
+
+    .ProfileName {
+        font-size: 42px;
+        font-weight: 100;
+        color: #303030;
+    }
+
+    .Skill_Box p {
+        font-size: 17px;
+        color: #606060;
+        line-height: 28px;
+    }
+
+    .Input_Box div:first-child input {
+        width: 33%;
+        height: 40px;
+        color: #fff;
+    }
+
+    .Subject {
+        width: 68%;
+        height: 45px;
+        font-size: 25px;
+        color: #fff;
+    }
+
+    .Input_Box textarea {
+        width: 68%;
+        color: #fff;
+    }
+
+    .Input_Box textarea::placeholder {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+
+    .Input_Box button {
+        width: 35%;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .Resume {
+        background-position: -45px 90px;
+    }
+}
+
+@media(min-width:768px) and (max-width:1024px) {
+    header {
+        width: 100%;
+        height: 0;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.233);
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        transition: .4s;
+        transition-delay: .100s;
+        position: fixed;
+        z-index: 99999999;
+    }
+
+    .banner div h1 {
+        font-size: 45px;
+    }
+
+    .banner div h3 {
+        font-size: 28px;
+    }
+
+    .banner &>div {
+        p {
+            line-height: 25px;
+            font-size: 14px;
+        }
+    }
+
+    .WorkTitleBOX h1 {
+        text-align: left;
+        padding: 20px;
+        font-size: 44px;
+    }
+
+    .Work p {
+        line-height: 24px;
+    }
+
+    .Logo {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 10%;
+    }
+
+    .Logo a {
+        color: #212227;
+        text-decoration: none;
+        font-size: 20px;
+        margin-left: -60px;
+        transition: 0.4s;
+    }
+
+    .Logo a:hover {
+        color: #777;
+    }
+
+    .Links & li {
+        button {
+            padding: 10px 12px;
+            font-size: 18px;
+        }
+    }
+
+    .Menu {
+        width: 400px;
+        border: 1px solid black;
+        overflow: hidden;
+        height: 0;
+        display: flex;
+        background: white;
+        justify-content: center;
+        flex-direction: column;
+        top: 100%;
+        right: 0%;
+        position: absolute;
+        z-index: 99999999999;
+        transition: 0.5s;
+    }
+
+    #menu_btn {
+        display: flex;
+
+        span {
+            height: 2px;
+            background-color: #eb5424;
+        }
+    }
+
+    .Menu ul {
+        flex-direction: column;
+    }
+
+    .Menu li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Menu ul:hover {
+        color: #eb5424;
+    }
+
+    .PortfolioContainer h2 {
+        font-size: 25px;
+    }
+
+    .Profile {
+        width: 500px;
+        gap: 20px;
+    }
+
+    .ProfileName {
+        font-size: 30px;
+    }
+
+    .ProfileList {
+        padding: 0px;
+    }
+
+    .ProfileList li {
+        font-size: 12px;
+    }
+
+    .Skill_Box {
+        width: 400px;
+    }
+
+    .Skill_Name {
+        font-size: 30px;
+        padding: 0px 150px;
+    }
+
+    .Skill_Box p {
+        font-size: 13px;
+        padding: 0px 80px;
+        line-height: 21px;
+    }
+
+    .Progress_Box {
+        width: 80%;
+        gap: 5px;
+    }
+
+    .Social_Link {
+        flex-wrap: wrap;
+    }
+
+    .Social_Info {
+        width: 384px;
+    }
+
+}
+
+@media (min-width:552px) and (max-width:768px) {
+    header {
+        width: 100%;
+        height: 0;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.233);
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        transition: .4s;
+        transition-delay: .100s;
+        position: fixed;
+        z-index: 99999999;
+    }
+
+    banner {
+        width: 100%;
+        height: 100px;
+    }
+
+    .banner div h1 {
+        font-size: 45px;
+    }
+
+    .banner div h3 {
+        font-size: 28px;
+    }
+
+    .banner &>div {
+        p {
+            line-height: 25px;
+            font-size: 10px;
+        }
+    }
+
+    .WorkTitleBOX h1 {
+        font-size: 44px;
+        padding: 20px;
+    }
+
+    .WorkBox {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .Work {
+        width: 100%;
+        height: 500px;
+    }
+
+    .Work p {
+        line-height: 24px;
+    }
+
+    .Logo {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 14%;
+    }
+
+    .Logo a {
+        color: #212227;
+        text-decoration: none;
+        font-size: 25px;
+        margin-left: -60px;
+        transition: 0.4s;
+    }
+
+    .Logo a:hover {
+        color: #777;
+    }
+
+    .Links {
+        padding: 0px;
+        gap: 17px;
+    }
+
+    .Links & li {
+        button {
+            padding: 10px 12px;
+            font-size: 18px;
+        }
+    }
+
+    .Menu {
+        width: 556px;
+        border: 1px solid black;
+        overflow: hidden;
+        height: 0;
+        display: flex;
+        background: white;
+        justify-content: center;
+        flex-direction: column;
+        top: 100%;
+        right: 0%;
+        position: absolute;
+        z-index: 99999999999;
+        transition: 0.5s;
+    }
+    .openmenu{
+        width: 100%;
+        border: 1px solid black;
+        overflow: hidden;
+        display: flex;
+        background: white;
+        justify-content: center;
+        flex-direction: column;
+        top: 100%;
+        right: 0%;
+        position: absolute;
+        z-index: 99999999999;
+        transition: 0.5s;
+        height: 400px;
+    }
+
+    #menu_btn {
+        display: flex;
+
+        span {
+            height: 2px;
+            background-color: #eb5424;
+        }
+    }
+
+    .Menu ul {
+        flex-direction: column;
+    }
+
+    .Menu li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Menu ul:hover {
+        color: #eb5424;
+    }
+
+    .ProfileSkills_container {
+        padding: 100px 20px;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .PortfolioContainer h2 {
+        font-size: 25px;
+    }
+
+    .Profile {
+        width: 500px;
+        gap: 20px;
+    }
+
+    .ProfileName {
+        font-size: 60px;
+    }
+
+    .ProfileList {
+        padding: 0px;
+    }
+
+    .ProfileList li {
+        font-size: 18px;
+    }
+
+    .Skill_Box {
+        width: 500px;
+    }
+
+    .Skill_Name {
+        font-size: 60px;
+        padding: 0px 160px;
+    }
+
+    .Skill_Box p {
+        font-size: 16px;
+        padding: 10px 0px;
+        line-height: 21px;
+    }
+
+    .Progress_Box {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .Social_Link {
+        flex-wrap: wrap;
+    }
+
+    .Social_Info {
+        width: 100%;
+    }
+
+}
+
+@media (min-width:320px) and (max-width:552px) {
+
+    header {
+        width: 100%;
+        height: 0;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.233);
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        transition: .4s;
+        transition-delay: .100s;
+        position: fixed;
+        z-index: 99999999;
+    }
+
+    banner {
+        width: 100%;
+        height: 100px;
+    }
+
+    .banner div h1 {
+        font-size: 40px;
+    }
+
+    .banner div h3 {
+        font-size: 25px;
+    }
+
+    .banner div p {
+        font-size: 14px;
+    }
+
+    .banner &>div {
+        p {
+            line-height: 25px;
+            font-size: 10px;
+        }
+    }
+   
+
+    .WorkTitleBOX h1 {
+        font-size: 44px;
+        padding: 20px;
+    }
+
+    .WorkBox {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .Work {
+        width: 100%;
+        height: 500px;
+    }
+
+    .Work p {
+        line-height: 24px;
+    }
+
+    .Logo {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 14%;
+    }
+
+    .Logo a {
+        color: #212227;
+        text-decoration: none;
+        font-size: 20px;
+        margin-left: -36px;
+        transition: 0.4s;
+    }
+
+    .Logo a:hover {
+        color: #777;
+    }
+
+    .Links {
+        padding: 0px;
+        gap: 17px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Links li {
+        button {
+            font-size: 18px;
+            padding: 10px 4px;
+        }
+    }
+
+
+    .Menu {
+        width: 100%;
+        border: 1px solid black;
+        overflow: hidden;
+        height: 0;
+        display: flex;
+        background: white;
+        justify-content: center;
+        flex-direction: column;
+        top: 100%;
+        right: 0%;
+        position: absolute;
+        z-index: 99999999999;
+        transition: 0.5s;
+    }
+
+      .openmenu{
+        width: 100%;
+        border: 1px solid black;
+        overflow: hidden;
+        display: flex;
+        background: white;
+        justify-content: center;
+        flex-direction: column;
+        top: 100%;
+        right: 0%;
+        position: absolute;
+        z-index: 99999999999;
+        transition: 0.5s;
+        height: 400px;
+    }
+
+    #menu_btn {
+        display: flex;
+
+        span {
+            height: 2px;
+            background-color: #eb5424;
+        }
+    }
+
+    .Menu ul {
+        flex-direction: column;
+    }
+
+    .Menu li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Menu ul:hover {
+        color: #eb5424;
+    }
+
+    .ProfileSkills_container {
+        padding: 100px 20px;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .PortfolioContainer h2 {
+        font-size: 25px;
+    }
+
+    .Profile {
+        width: 500px;
+        gap: 20px;
+    }
+
+    .ProfileName {
+        font-size: 42px;
+    }
+
+    .ProfileList {
+        padding: 0px;
+    }
+
+    .ProfileList li {
+        font-size: 16px;
+    }
+
+    .Skill_Box {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .Skill_Name {
+        font-size: 42px;
+        padding: 0px;
+    }
+
+    .Skill_Box p {
+        font-size: 11px;
+        padding: 10px 0px;
+        line-height: 19px;
+    }
+
+    .Progress_Box {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .Social_Link {
+        flex-wrap: wrap;
+    }
+
+    .Social_Info {
+        width: 100%;
+    }
+
+    .Resume {
+        padding: 0px 10px;
+    }
+
+    .Resume_Box h4 {
+        font-size: 30px;
+    }
+
+    .Resume_Box h2 {
+        font-size: 30px;
+    }
+
+    .Resume_Box p {
+        font-size: 13px;
+    }
+
+    .Drop_Title h1 {
+        font-size: 30px;
+    }
+
+    .Input_Box div:first-child input {
+        width: 45%;
+        height: 34px;
+    }
+
+    .Subject {
+        width: 92%;
+        height: 34px;
+    }
+
+    .Input_Box textarea {
+        width: 92%;
+    }
+
+    .Input_Box button {
+        width: 92%;
+    }
+
+    footer{
+        font-size: 13px;
+    }
+
+}
